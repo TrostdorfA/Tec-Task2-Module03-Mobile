@@ -12,3 +12,13 @@ document.querySelector(".go-top-container").addEventListener("click", () => {
     behavior: "smooth",
   })
 })
+
+let checkedButton = document.getElementById("check")
+
+// Cerrar menu al hacer scroll
+
+window.addEventListener("scroll", () => {
+  if (checkedButton.checked) {
+    checkedButton.checked = false
+  }
+})

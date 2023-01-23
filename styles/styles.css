@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+}
+
+nav {
+  background: rgb(157, 255, 124);
+  background: linear-gradient(
+    0deg,
+    rgba(157, 255, 124, 1) 0%,
+    rgba(125, 203, 99, 1) 26%,
+    rgba(65, 110, 50, 1) 99%
+  );
+  height: 80px;
+  width: 100%;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+}
+
+nav ul li a {
+  color: #f5f5f5;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+li a.active,
+li a:hover {
+  background: #75b9a8;
+  transition: 0.5s;
+  color: #337b3a;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.container-cards {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  margin: 20px;
+  width: 80%;
+  max-height: 50%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+.card-content h2 {
+  text-align: left;
+  padding: 0 20px;
+}
+
+.text-container {
+  margin-left: 100px;
+  text-align: center;
+  padding-top: 25px;
+  display: none;
+}
+
+@media (max-width: 952px) {
+  .enlace {
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 852px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2cbc96;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 2;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  li a:hover,
+  li a.active {
+    background: none;
+    color: #337b3a;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .text-container {
+    display: block;
+  }
+}
+
+.enlace {
+  position: absolute;
+  padding: 20px 50px;
+}
+
+.nav-container p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background: #75b9a8;
+  width: 100%;
+  background: rgb(157, 255, 124);
+  background: linear-gradient(
+    0deg,
+    rgba(157, 255, 124, 1) 0%,
+    rgba(125, 203, 99, 1) 26%,
+    rgba(65, 110, 50, 1) 99%
+  );
+  border-top-left-radius: 50%;
+  z-index: 2;
+}
+
+.footer-container {
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-social {
+  align-items: center;
+}
+
+.bi {
+  color: #000;
+  margin: 0 10px;
+}
+
+.margin8 {
+  margin-bottom: 8rem;
+}
+
+.container-maps {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 20px;
+  margin-bottom: 8rem;
+}
+
+.container-text {
+  margin: 20px;
+  margin-bottom: 8rem;
+}
+
+/* GOUP BUTTON */
+
+.go-top-container {
+  position: fixed;
+  bottom: 4rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  z-index: -1;
+}
+
+.go-top-button {
+  width: 0rem;
+  height: 0rem;
+  background: #2cbc96;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.go-top-button i {
+  position: absolute;
+  font-size: 1rem;
+  top: 50%;
+  left: 36%;
+  transform: translate(-50%, -50%) scale(0);
+  color: #fff;
+  transition: 0.2s;
+}
+
+.show {
+  z-index: 10;
+}
+
+.show .go-top-button {
+  animation: popup 0.3s ease-in-out;
+  width: 4rem;
+  height: 4rem;
+  z-index: 11;
+}
+
+.show i {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+  0% {
+    width: 0rem;
+    height: 0rem;
+  }
+  50% {
+    width: 6rem;
+    height: 6rem;
+  }
+  100% {
+    width: 4rem;
+    height: 4rem;
+  }
+}

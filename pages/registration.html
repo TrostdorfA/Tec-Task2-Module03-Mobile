@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Registration</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="bi bi-list"></i>
+                </label>
+                <a class="enlace" href="#">
+                    <img class="logo" src="../assets/mdhl_logo.png" alt="logo">
+                </a>
+                <div class="text-container">
+                    <p>Registration</p>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About MDHL</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="game_info.html">Game Information</a></li>
+                    <li><a class="active" href="registration.html">Registration</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container-text">
+            <div>
+                <span class="required_notification bold">* Datos requeridos</span>
+                <form class="contact_form" id="contact_form" action="show_data.html" method="get">
+                    <!--action=""-->
+                    <div class="container-form">
+                        <fieldset>
+                            <legend>Contact</legend>
+                            <div class="container-first-field">
+                                <label for="name">Player's First Name:</label>
+                                <input type="text" id="name" name="name" required placeholder="Insert your first name">
+                            </div>
+                            <div class="container-second-field">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" name="lastName" id="lastName" required
+                                    placeholder="Insert your Last Name">
+                            </div>
+                            <div class="container-third-field">
+                                <label for="address">Street Address:</label>
+                                <input type="text" name="address" id="address" required
+                                    pattern="[A-z\s]{1,15}[0-9]{3,4}" placeholder="Insert your address">
+                                <span class="form_hint">Formato correcto: "Street Nº"</span>
+                            </div>
+                            <div class="container-forth-field">
+                                <label for="city">City:</label>
+                                <input type="text" id="city" name="city" required placeholder="Insert your city from">
+                            </div>
+                            <div class="container-fifth-field">
+                                <label for="zipCode">Zip Code:</label>
+                                <input type="text" id="zipCode" name="zipCode" placeholder="Insert your Zip Code">
+                            </div>
+                            <div class="container-sixth-field">
+                                <label for="date">Birth Date(dd/mm/yyyy):</label>
+                                <input type="date" name="date" id="date" required>
+                            </div>
+                            <div class="container-seventh-field">
+                                <label>Gender:</label>
+                                <label for="female">Female<input type="radio" id="female" name="gender"
+                                        value="female"></label>
+                                <label for="male">Male<input type="radio" id="male" name="gender" value="male"></label>
+                                <label for="none">None<input type="radio" id="none" name="gender" value="none"></label>
+                            </div>
+                            <div class="container-eighth-field">
+                                <label>Grade:</label>
+                                <label for="pre-school" id="preschool"><input type="radio" id="pre-school" name="grade"
+                                        value="preshcool">Pre-School</label>
+                                <label for="1st"><input type="radio" id="1st" name="grade" value="1st">1st</label>
+                                <label for="2nd"><input type="radio" id="2nd" name="grade" value="2nd">2nd</label>
+                                <label for="3rd"><input type="radio" id="3rd" name="grade" value="3rd">3rd</label>
+                                <label for="4th"><input type="radio" id="4th" name="grade" value="4th">4th</label>
+                                <label for="5th"><input type="radio" id="5th" name="grade" value="5th">5th</label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Extras</legend>
+                            <ul>
+                                <li class="container-li">
+                                    <p class="bold">Which elementary school do you live near?</p>
+                                    <div class="size">
+                                        <label class="size bold school-label">Closest
+                                            School:</label>
+                                        <div>
+                                            <select name="closest-school">
+                                                <option value="ajkatzenmaier">AJ Katzenmaier</option>
+                                                <option value="greenbay">Greenbay</option>
+                                                <option value="howardayeager">Howard A Yeager</option>
+                                                <option value="marjoriephart">Marjorie P Hart</option>
+                                                <option value="northelementary">North Elementary</option>
+                                                <option value="southelementary">South Elementary</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="container-li">
+                                    <p class="bold">What position(s) do you normally play? (check all that apply)</p>
+                                    <div class="size">
+                                        <div>
+                                            <label for="forward"><input type="checkbox" id="forward" name="position"
+                                                    value="forward">Forward</label>
+                                            <label for="defense"><input type="checkbox" id="defense" name="position"
+                                                    value="defense">Defense</label>
+                                        </div>
+                                        <div>
+                                            <label for="midfield"><input type="checkbox" id="midfield" name="position"
+                                                    value="midfield">Midfield</label>
+                                            <label for="goalkeeper"><input type="checkbox" id="goalkeeper"
+                                                    name="position" value="goalkeeper">Goalkeeper</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="container-li">
+                                    <p class="bold">Uniform Size:</p>
+                                    <div class="size">
+                                        <div>
+                                            <label for="youthsmall"><input type="checkbox" id="youthsmall"
+                                                    name="uniform" value="youthsmall">Youth Small</label>
+                                            <label for="youthmedium"><input type="checkbox" id="youthmedium"
+                                                    name="uniform" value="youthmedium">Youth Medium</label>
+                                        </div>
+                                        <div>
+                                            <label for="youthlarge"><input type="checkbox" id="youthlarge"
+                                                    name="uniform" value="youthlarge">Youth Large</label>
+                                            <label for="small"><input type="checkbox" id="small" name="uniform"
+                                                    value="small">Small</label>
+                                        </div>
+                                        <div>
+                                            <label for="medium"><input type="checkbox" id="medium" name="uniform"
+                                                    value="medium">Medium</label>
+                                            <label for="large"><input type="checkbox" id="large" name="uniform"
+                                                    value="large">Large</label>
+                                        </div>
+                                        <div>
+                                            <label for="extra-large"><input type="checkbox" id="extra-large"
+                                                    name="uniform" value="extra-large">Extra-Large</label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Consent</legend>
+                            <dl class="size">
+                                <dt class="bold">Permission to play</dt>
+                                <dd class="signmarg">I, the parent or guardian of the minor registrant, agree that
+                                    the
+                                    registrant and I will abide by all the rules of the Mighty Ducks Hockey League
+                                    (MDHL). In recognizing the possibility of physical injury associated with hockey
+                                    and
+                                    in consideration for the "League" accepting the registrant for its hockey
+                                    programs
+                                    and activities, I hereby release, discharge, and/or otherwise indemnify MDHL,
+                                    their
+                                    employees and associated personnel and volunteers, including the facilities used
+                                    for
+                                    practices and games, against any claim by or on behalf of the registrant as a
+                                    result
+                                    of the registrant's participation in the program and/or being transported to or
+                                    from
+                                    MDHL sponsored activities, which transportation.
+                                    <p>By entering your name below, I hereby agree and authorize the above. In
+                                        addition,
+                                        by signing below, I also acknowledge that I have read the cancellation
+                                        policy
+                                        and agree to its terms.</p>
+                                </dd>
+                            </dl>
+                            <div class="container-permission">
+                                <label for="signature">Parent/Guardian Signature</label>
+                                <input type="text" name="signature" id="signature" size="30" required
+                                    placeholder="Sign with your name">
+                            </div>
+                            <div class="container-permission">
+                                <label for="datesign">Date</label>
+                                <input type="date" name="datesign" id="datesign" required>
+                            </div>
+                            <button class="submit" type="submit">Submit</button>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="go-top-container">
+            <div class="go-top-button">
+                <i class="bi bi-chevron-up"></i>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h3>MDHL</h3>
+                    <p>© 2021 Mighty Ducks Hockey League</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Social</h3>
+                    <p><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>

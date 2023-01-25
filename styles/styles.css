@@ -158,6 +158,14 @@ li a:hover {
   border-radius: 20%;
 }
 
+.carousel-control-next {
+  left: 90%;
+}
+
+.carousel-control-prev {
+  right: 90%;
+}
+
 .enlace {
   position: absolute;
   padding: 20px 50px;

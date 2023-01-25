@@ -1,0 +1,22 @@
+{
+  "name": "module3-task2-maquetado",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrostdorfA/Tec-Task2-Module03-Mobile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TrostdorfA/Tec-Task2-Module03-Mobile/issues"
+  },
+  "homepage": "https://github.com/TrostdorfA/Tec-Task2-Module03-Mobile#readme",
+  "description": "",
+  "dependencies": {
+    "firebase-tools": "^11.21.0"
+  }
+}
